@@ -1,28 +1,29 @@
 import React, { useState } from 'react';
+import './Form.css'
+import { NavLink } from 'react-router-dom';
 
-const Form = (postToAPI) => {
-  const [name, setName] = useState('');
+const Form = ({ setPersonalMessage, goToPrescription }) => {
   const [message, setMessage] = useState('');
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setPersonalMessage(message);
+    setMessage('');
+  }
 
   return (
-    <form>
-      <input
-        type='text'
-        name='name'
-        placeholder='Name'
-        value={name}
-        onChange={(event) => setName(event.target.value)}
-      />
-
-      <input
-        type='text'
+    <form className='personalized-form' onSubmit={(event) => handleSubmit(event)}>
+      <label htmlFor='textarea'>Write a message for your prescription:</label>
+      <textarea
+        id='textarea'
         name='message'
-        placeholder='Message'
+        placeholder='Personalized message'
+        rows='7'
+        cols='35'
         value={message}
         onChange={(event) => setMessage(event.target.value)}
       />
 
-      <button className='submit-button' onClick={() => postToAPI(name, message)}>Submit</button>
+      <button type='submit' className='submit-button' disabled={!message}>Submit</button>
     </form>
   )
 }
