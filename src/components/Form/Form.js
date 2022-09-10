@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
-import './Form.css'
-import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import './Form.css';
+import { useNavigate } from 'react-router-dom';
 
-const Form = ({ setPersonalMessage, goToPrescription }) => {
+const Form = ({ setPersonalMessage, id, resetAppState, hasShow }) => {
   const [message, setMessage] = useState('');
+  const navigate = useNavigate();
+
+  useEffect(() => resetAppState(), []);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setPersonalMessage(message);
+    navigate(`/prescription/${id}`);
     setMessage('');
   }
 
@@ -22,8 +27,7 @@ const Form = ({ setPersonalMessage, goToPrescription }) => {
         value={message}
         onChange={(event) => setMessage(event.target.value)}
       />
-
-      <button type='submit' className='submit-button' disabled={!message}>Submit</button>
+      <button type='submit' className='submit-button' disabled={!message || !hasShow}>Submit</button>
     </form>
   )
 }
