@@ -6,7 +6,7 @@ import Instructions from '../Instructions/Instructions';
 import Prescription from '../Prescription/Prescription';
 import { formatShowSearch } from '../../utility-functions/utility-functions';
 import { getShow } from '../../api-calls/api-calls';
-import { Routes, Route, NavLink, Redirect } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 
 function App() {
   const [show, setShow] = useState({});

@@ -1,12 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Form.css';
 import { useNavigate } from 'react-router-dom';
 
 const Form = ({ setPersonalMessage, id, resetAppState, hasShow }) => {
   const [message, setMessage] = useState('');
+  const appStateReset = useRef(false);
   const navigate = useNavigate();
 
-  useEffect(() => resetAppState(), []);
+  useEffect(() => {
+    if (!appStateReset.current) {
+      resetAppState();
+      appStateReset.current = true;
+    }
+  }, [resetAppState]);
 
   const handleSubmit = (event) => {
     event.preventDefault();

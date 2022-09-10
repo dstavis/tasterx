@@ -20,7 +20,7 @@ const Search = ({ searchForShow }) => {
 
             <button type='submit' className='search-button' disabled={!showName}>Search</button>
         </form>
-    )
+    );
 }
 
-export default Search
+export default Search;

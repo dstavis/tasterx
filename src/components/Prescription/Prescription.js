@@ -9,7 +9,7 @@ const Prescription = ({ show, message }) => {
       <a href={show.officialSite}>Official TV show website</a>
       <p>{message}</p>
     </div>
-  )
+  );
 }
 
-export default Prescription
+export default Prescription;

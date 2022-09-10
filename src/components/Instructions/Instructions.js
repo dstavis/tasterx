@@ -11,4 +11,4 @@ const Instructions = () => {
   )
 }
 
-export default Instructions
+export default Instructions;
