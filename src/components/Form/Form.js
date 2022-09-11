@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Form.css';
-import { useNavigate } from 'react-router-dom';
 
-const Form = ({ setPersonalMessage, id, resetAppState, hasShow }) => {
+const Form = ({ setPersonalMessage, resetAppState, hasShow }) => {
   const [message, setMessage] = useState('');
   const appStateReset = useRef(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     if (!appStateReset.current) {
@@ -17,7 +15,6 @@ const Form = ({ setPersonalMessage, id, resetAppState, hasShow }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     setPersonalMessage(message);
-    navigate(`/prescription/${id}`);
     setMessage('');
   }
 
