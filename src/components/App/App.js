@@ -5,7 +5,7 @@ import Search from '../Search/Search';
 import Instructions from '../Instructions/Instructions';
 import Prescription from '../Prescription/Prescription';
 import { formatShowSearch } from '../../utility-functions/utility-functions';
-import { getShow,  postPrescription} from '../../api-calls/api-calls';
+import { getShow, postPrescription} from '../../api-calls/api-calls';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 
 function App() {
