@@ -30,20 +30,19 @@ const getPrescription = (endpoint) => {
 
 const postPrescription = (body) => {
     return fetch("https://vast-forest-00915.herokuapp.com/prescriptions/", {
-         method: "POST",
-         headers: {
-             "Content-Type": "application/json"
-         },
-         body: JSON.stringify(body)
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(body)
      })
      .then(response => {
-         if(!response.ok) {
-             throw new Error('Sorry, there was an error posting your information.');
-         }
-         return response.json();
+        if(!response.ok) {
+            throw new Error('Sorry, there was an error posting your information.');
+        }
+        return response.json();
      });
-  
- }
+}
 
 
 export { getShow, postPrescription, getShowById, getPrescription };

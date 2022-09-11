@@ -19,9 +19,7 @@ function App() {
     .then(data => {
       setShow({
         showID: data.id,
-        name: data.name,
-        // image: data.image.medium,
-        // officialSite: data.officialSite
+        name: data.name
       })
     })
     .catch(error => console.log(error));
@@ -34,8 +32,8 @@ function App() {
       showID: show.showID
     })
     .then(data => {      
-      setShow(data.prescription)
-      navigate(`/prescription/${data.prescription.id}`)
+      setShow(data.prescription);
+      navigate(`/prescription/${data.prescription.id}`);
     })
     .catch(error => console.log(error));
   }
