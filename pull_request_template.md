@@ -1,7 +1,7 @@
 What does this PR do?
 * Please make a bulleted list
 
-How should this PR be tested?
+Where should the reviewer start?
 * Please make a bulleted list
 
 Anything else the reviewer need to know?
