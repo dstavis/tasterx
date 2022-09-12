@@ -1,0 +1,17 @@
+.logo {
+  position: absolute;
+  height: 35%;
+  width: auto;
+  right: 10%;
+  top: 1%;
+  transform: rotate(22deg);
+}
+
+.title-logo {
+  position: absolute;
+  height: 20%;
+  width: auto;
+  top: 1%;
+  left: 2%;
+  transform: rotate(-5deg);
+}

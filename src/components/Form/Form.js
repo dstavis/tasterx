@@ -25,8 +25,8 @@ const Form = ({ setPersonalMessage, resetAppState, hasShow }) => {
         id='textarea'
         name='message'
         placeholder='Personalized message'
-        rows='7'
-        cols='35'
+        rows='9'
+        cols='65'
         value={message}
         onChange={(event) => setMessage(event.target.value)}
       />
