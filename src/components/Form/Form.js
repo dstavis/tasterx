@@ -20,13 +20,12 @@ const Form = ({ setPersonalMessage, resetAppState, hasShow }) => {
 
   return (
     <form className='personalized-form' onSubmit={(event) => handleSubmit(event)}>
-      <label htmlFor='textarea'>Write a message for your prescription:</label>
+      <label htmlFor='textarea'>Write a message for the prescription:</label>
       <textarea
+        className='text-area'
         id='textarea'
         name='message'
         placeholder='Personalized message'
-        rows='9'
-        cols='65'
         value={message}
         onChange={(event) => setMessage(event.target.value)}
       />

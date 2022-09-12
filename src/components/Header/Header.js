@@ -5,7 +5,7 @@ import titleLogo from '../../assets/TasteRX-title-logo.svg';
 
 const Header = () => {
   return (
-    <div>
+    <div className="header">
       <img className='title-logo' src={titleLogo} alt='title logo' />
       <img className='logo' src={logo} alt='logo' />
     </div>

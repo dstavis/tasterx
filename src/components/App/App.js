@@ -5,6 +5,7 @@ import Search from '../Search/Search';
 import Instructions from '../Instructions/Instructions';
 import Prescription from '../Prescription/Prescription';
 import Header from '../Header/Header';
+import ShowDetails from '../ShowDetails/ShowDetails';
 import { formatShowSearch } from '../../utility-functions/utility-functions';
 import { getShow, postPrescription} from '../../api-calls/api-calls';
 import { Routes, Route, useNavigate } from 'react-router-dom';
@@ -22,10 +23,14 @@ function App() {
     .then(data => {
       setShow({
         showID: data.id,
-        name: data.name
+        name: data.name,
+        image: data.image.medium
       })
     })
-    .catch(error => setError(error));
+    .catch(error => {
+      setError(error);
+      setShow({});
+    })
   }
 
   const setPersonalMessage = (message) => {
@@ -44,7 +49,7 @@ function App() {
   const resetState = () => {
     setShow({});
     setMessage('');
-    setError('')
+    setError('');
   }
 
   return (
@@ -55,11 +60,10 @@ function App() {
             <Header />
             <div className='search-form-container'>
               <Search searchForShow={searchForShow} />
-              <div className='show-name-container'>
-                {show.name && <p className='show-name'>{`${show.name}`}</p>}
-                {error && <p className='error-msg'>{`${error}`}</p>}
+              <div className='prescription-preview'>
+                <ShowDetails name={show.name} image={show.image} error={error} />
+                <Form setPersonalMessage={setPersonalMessage} hasShow={show.showID} id={show.id} resetAppState={resetState} />
               </div>
-              <Form setPersonalMessage={setPersonalMessage} hasShow={show.showID} id={show.id} resetAppState={resetState} />
             </div>
             <div className='instructions-container'>
               <Instructions />

@@ -1,0 +1,49 @@
+.show-details {
+  display: flex;
+  height: 55%;
+  border-bottom: 1px solid black;
+}
+
+.prescription-pad {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 60%;
+}
+
+.rx-and-prompt {
+  display: flex;
+  height: 50%;
+}
+
+.prompt {
+  margin: 20% 0% 0% 15%;
+}
+
+.rx-logo {
+  height: 60%;
+  width: 20%;
+  border: 1px solid black;
+  margin: 2%;
+}
+
+.show-name,
+.error-msg {
+  font-size: 2em;
+  margin-top: 3%;
+}
+
+.poster-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 40%;
+}
+
+.show-poster {
+  height: 90%;
+  width: 68%;
+  border-radius: 10px;
+}
+

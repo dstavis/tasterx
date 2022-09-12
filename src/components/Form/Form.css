@@ -2,6 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 50%;
+}
+
+.text-area {
+  height: 70%;
+  width: 60%;
 }
 
 .submit-button {
