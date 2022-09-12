@@ -19,7 +19,7 @@ const getShowById = (endpoint) => {
 }
 
 const getPrescription = (endpoint) => {
-    return fetch(`https://vast-forest-00915.herokuapp.com/prescriptions/${endpoint}`)
+    return fetch(`https://tasterx.herokuapp.com/prescriptions/${endpoint}`)
         .then(response => {
             if(!response.ok) {
                 throw new Error('Sorry, looks like we can\'t find this prescription.');
@@ -29,7 +29,7 @@ const getPrescription = (endpoint) => {
 }
 
 const postPrescription = (body) => {
-    return fetch("https://vast-forest-00915.herokuapp.com/prescriptions/", {
+    return fetch("https://tasterx.herokuapp.com/prescriptions/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
