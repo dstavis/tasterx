@@ -4,6 +4,8 @@ import Form from '../Form/Form';
 import Search from '../Search/Search';
 import Instructions from '../Instructions/Instructions';
 import Prescription from '../Prescription/Prescription';
+import Header from '../Header/Header';
+import ShowDetails from '../ShowDetails/ShowDetails';
 import { formatShowSearch } from '../../utility-functions/utility-functions';
 import { getShow, postPrescription} from '../../api-calls/api-calls';
 import { Routes, Route, useNavigate } from 'react-router-dom';
@@ -11,18 +13,24 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 function App() {
   const [show, setShow] = useState({});
   const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
   
   const searchForShow = (string) => {
     const endpoint = formatShowSearch(string);
+    setError('');
     getShow(endpoint)
     .then(data => {
       setShow({
         showID: data.id,
-        name: data.name
+        name: data.name,
+        image: data.image.medium
       })
     })
-    .catch(error => console.log(error));
+    .catch(error => {
+      setError(error);
+      setShow({});
+    })
   }
 
   const setPersonalMessage = (message) => {
@@ -41,20 +49,33 @@ function App() {
   const resetState = () => {
     setShow({});
     setMessage('');
+    setError('');
   }
 
   return (
     <div className="App">
       <Routes>
         <Route exact path='/' element={
-          <div>
-            <Search searchForShow={searchForShow} />
-            {show.name && <p>{`${show.name}`}</p>}
-            <Form setPersonalMessage={setPersonalMessage} hasShow={show.showID} id={show.id} resetAppState={resetState} />
-            <Instructions />
+          <div className='home-page'>
+            <Header />
+            <div className='search-form-container'>
+              <Search searchForShow={searchForShow} />
+              <div className='prescription-preview'>
+                <ShowDetails name={show.name} image={show.image} error={error} />
+                <Form setPersonalMessage={setPersonalMessage} hasShow={show.showID} id={show.id} resetAppState={resetState} />
+              </div>
+            </div>
+            <div className='instructions-container'>
+              <Instructions />
+            </div>
           </div>
         }/>
-        <Route exact path='/prescription/:id' element={<Prescription />}/>  
+        <Route exact path='/prescription/:id' element={
+          <div className='prescription-page'>
+            <Header />
+            <Prescription />
+          </div>
+        }/>
       </Routes>
     </div>
   );
