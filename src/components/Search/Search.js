@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Search.css';
 
 const Search = ({ searchForShow }) => {
     const [showName, setShowName] = useState('');
@@ -9,8 +10,9 @@ const Search = ({ searchForShow }) => {
     }
 
     return (
-        <form onSubmit={(event) => handleSubmit(event)}>
+        <form className='search-form' onSubmit={(event) => handleSubmit(event)}>
             <input 
+                className='search-input'
                 type='text'
                 name='showName'
                 placeholder='TV Show Name'
@@ -18,7 +20,7 @@ const Search = ({ searchForShow }) => {
                 onChange={(event) => setShowName(event.target.value)}
             />
 
-            <button type='submit' className='search-button' disabled={!showName}>Search</button>
+            <button className='search-button' type='submit' disabled={!showName}>Search</button>
         </form>
     );
 }
