@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/tasterx/static/css/main.c8ff7198.css",
-    "main.js": "/tasterx/static/js/main.0edec960.js",
+    "main.js": "/tasterx/static/js/main.29a75c4c.js",
     "static/media/TasteRX-title-logo.svg": "/tasterx/static/media/TasteRX-title-logo.b017ab2f38ebce984355f68c1c1f3cf2.svg",
     "static/media/TasteRX-logo.svg": "/tasterx/static/media/TasteRX-logo.fea362620ff18d30139b0a39234f67d7.svg",
     "static/media/RX-logo.svg": "/tasterx/static/media/RX-logo.c7321b1a931325785d8e68a2fa78ccd6.svg",
     "index.html": "/tasterx/index.html",
     "main.c8ff7198.css.map": "/tasterx/static/css/main.c8ff7198.css.map",
-    "main.0edec960.js.map": "/tasterx/static/js/main.0edec960.js.map"
+    "main.29a75c4c.js.map": "/tasterx/static/js/main.29a75c4c.js.map"
   },
   "entrypoints": [
     "static/css/main.c8ff7198.css",
-    "static/js/main.0edec960.js"
+    "static/js/main.29a75c4c.js"
   ]
 }
