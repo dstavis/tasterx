@@ -11,8 +11,8 @@ const Prescription = () => {
   useEffect(() => {
     getPrescription(id)
       .then(data => {
-        setPrescription(data.data);
-        getShowById(data.data.showID)
+        setPrescription(data.prescription);
+        getShowById(data.prescription.showID)
           .then(data => {
             const { name, officialSite, image } = data;
             setShow({
