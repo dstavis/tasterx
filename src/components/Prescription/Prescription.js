@@ -30,7 +30,7 @@ const Prescription = () => {
     <div>
       <p>{show.name}</p>
       <img src={show.image} alt='show poster'/>
-      <a href={show.officialSite}>Official TV show website</a>
+      {show.officialSite && <a href={show.officialSite}>Official TV show website</a>}
       <p>{prescription.message}</p>
     </div>
   );
