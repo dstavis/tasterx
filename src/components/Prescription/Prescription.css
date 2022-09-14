@@ -1,0 +1,50 @@
+.script-container {
+    border: black solid 3px;
+    background-color: white;
+    height: 88%;
+    width: 90%; 
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+ 
+}
+
+.logo-and-prompt {
+    border: green solid 1px;
+
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row; */
+    height:45%;
+    width:100%;
+    align-items: center;
+}
+  
+.script-logo {
+    height: 85%;
+    width: 35%;
+    border: 1px solid black;
+    margin: 2%;
+  }
+
+  .to-be-prescribed-message {
+    border: red solid 1px;
+    margin-right:5%;
+    margin-top: 24%;
+  }
+
+  .top-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: peru solid 3px;
+    width: 66%;
+    height: 50%;
+    border-bottom: black solid 3px;
+  }
+
+  .script-show-poster {
+    border-radius: 10px;
+    margin: 2% 5%;
+  }
+  
