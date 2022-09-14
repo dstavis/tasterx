@@ -29,7 +29,7 @@ const getPrescription = (endpoint) => {
 }
 
 const postPrescription = (body) => {
-    return fetch("https://tasterx.herokuapp.com/prescriptions/", {
+    return fetch("https://tasterx.herokuapp.com/presciptions/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

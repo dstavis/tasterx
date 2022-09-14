@@ -6,6 +6,7 @@ import Instructions from '../Instructions/Instructions';
 import Prescription from '../Prescription/Prescription';
 import Header from '../Header/Header';
 import ShowDetails from '../ShowDetails/ShowDetails';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import { formatShowSearch } from '../../utility-functions/utility-functions';
 import { getShow, postPrescription} from '../../api-calls/api-calls';
 import { Routes, Route, useNavigate } from 'react-router-dom';
@@ -24,7 +25,7 @@ function App() {
       setShow({
         showID: data.id,
         name: data.name,
-        image: data.image.medium
+        image: data.image && data.image.medium
       })
     })
     .catch(error => {
@@ -43,7 +44,9 @@ function App() {
       setShow(data.prescription);
       navigate(`/prescription/${data.prescription.id}`);
     })
-    .catch(error => console.log(error));
+    .catch(error => {
+      setError(error)
+    });
   }
 
   const resetState = () => {
@@ -59,6 +62,7 @@ function App() {
           <div className='home-page'>
             <Header />
             <div className='search-form-container'>
+              {error && <ErrorMessage error={error} />}
               <Search searchForShow={searchForShow} />
               <div className='prescription-preview'>
                 <ShowDetails name={show.name} image={show.image} error={error} />
