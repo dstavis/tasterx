@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import './Prescription.css';
 import rxLogo from '../../assets/RX-logo.svg';
 import { getShowById, getPrescription } from '../../api-calls/api-calls';
+import { formatShowSearch } from '../../utility-functions/utility-functions';
 
 const Prescription = () => {
   const [show, setShow] = useState({});
@@ -35,7 +36,8 @@ const Prescription = () => {
           <p className='to-be-prescribed'>Show to be prescribed:</p>
         </div>
         <p className='script-show-name'>{show.name}</p>
-        <a href={show.officialSite}>Official TV show website</a>
+        {show.officialSite && <a href={show.officialSite} target='_blank'>Official TV show website</a>}
+        {!show.officialSite && <a href={`https://www.google.com/search?q=${show.name}`} target='_blank'>{`Search google for ${show.name}`}</a>}
       </div>
         <img className='script-show-poster' src={show.image} alt='show poster'/>
       <div className='bottom-container'>
