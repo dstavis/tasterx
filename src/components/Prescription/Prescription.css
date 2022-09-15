@@ -2,49 +2,62 @@
     border: black solid 3px;
     background-color: white;
     height: 88%;
-    width: 90%; 
+    width: 95%; 
     border-radius: 10px;
     display: flex;
     align-items: flex-start;
- 
+    flex-wrap: wrap;
 }
 
 .logo-and-prompt {
-    border: green solid 1px;
-
+    /* border: green solid 1px; */
     display: flex;
     justify-content: space-between;
     /* flex-direction: row; */
     height:45%;
     width:100%;
     align-items: center;
-}
+    }
   
 .script-logo {
-    height: 85%;
-    width: 35%;
+    height: 65%;
+    width: 16%;
     border: 1px solid black;
-    margin: 2%;
-  }
+    margin-left: 1.8%;
+    margin-bottom: 6%;
+}
 
-  .to-be-prescribed-message {
-    border: red solid 1px;
-    margin-right:5%;
-    margin-top: 24%;
-  }
+.to-be-prescribed {
+    /* border: red solid 1px; */
+    margin-right:35%;
+    margin-top: 7%;
+    font-size: 135%;
+}
 
-  .top-container {
+.top-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: peru solid 3px;
+    /* border: peru solid 3px; */
     width: 66%;
     height: 50%;
-    border-bottom: black solid 3px;
-  }
+}
 
-  .script-show-poster {
+.bottom-container {
+    border-top: black solid 3px;
+    height:50%;
+    align-content: center;
+    width: 100%
+}
+
+.script-show-poster {
+    height: 40%;
+    width: 24%;
     border-radius: 10px;
     margin: 2% 5%;
-  }
+}
+
+.script-show-name {
+    font-size: 400%;
+}
   
