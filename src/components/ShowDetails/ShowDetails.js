@@ -2,7 +2,7 @@ import React from 'react';
 import './ShowDetails.css';
 import rxLogo from '../../assets/RX-logo.svg';
 
-const ShowDetails = ({ name, image, error }) => {
+const ShowDetails = ({ name, image }) => {
   return (
     <div className='show-details'>
       <div className='prescription-pad'>
@@ -11,7 +11,6 @@ const ShowDetails = ({ name, image, error }) => {
           <p className='prompt'>Show to be prescribed:</p>
         </div>
         {name && <p className='show-name'>{name}</p>}
-        {error && <p className='error-msg'>{`${error}`}</p>}
       </div>
       <div className='poster-container'>
         {image && <img className='show-poster' src={image} alt='tv show poster'/>}
