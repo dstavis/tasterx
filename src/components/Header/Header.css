@@ -14,4 +14,9 @@
   top: 1%;
   left: 2%;
   transform: rotate(-5deg);
+  transition: .3s;
+}
+
+.title-logo:hover {
+  transform: scale(1.05) rotate(-3deg)
 }

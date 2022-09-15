@@ -78,6 +78,7 @@ function App() {
           <div className='prescription-page'>
             <Header />
             <Prescription />
+            <button className='make-new-script' onClick={() => navigate('/')}>Write a new prescription</button>
           </div>
         }/>
       </Routes>

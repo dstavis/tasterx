@@ -48,7 +48,19 @@
 
 .prescription-page {
   display: flex;
-  justify-content: center;
-  height: 80%;
+  flex-direction: column;
+  align-items: center;
+  height: 82%;
   width: 45%;
+}
+
+.make-new-script {
+  height: 8%;
+  width: 23%;
+  margin: 3% 0% 8% 0%;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: white;
+  transition: .3s;
+  text-align: center;
 }
