@@ -1,7 +1,7 @@
 .show-details {
   display: flex;
   height: 55%;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
 }
 
 .prescription-pad {
@@ -31,6 +31,8 @@
 .error-msg {
   font-size: 2em;
   margin-top: 3%;
+  font-size: 135%;
+
 }
 
 .poster-container {

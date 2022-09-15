@@ -45,3 +45,10 @@
   border-radius: 10px;
   background-color: white;
 }
+
+.prescription-page {
+  display: flex;
+  justify-content: center;
+  height: 80%;
+  width: 45%;
+}
