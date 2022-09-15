@@ -27,7 +27,6 @@ const Prescription = () => {
         .catch(error => console.log(error));
   },[])
 
-  console.log(prescription.message)
   return (
     <div className='script-container'>
       <div className='top-container'> 
