@@ -49,7 +49,6 @@
 .prescription-page {
   display: flex;
   justify-content: center;
-  border: blue solid 1px;
   height: 80%;
   width: 45%;
 }

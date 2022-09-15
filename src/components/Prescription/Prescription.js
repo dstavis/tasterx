@@ -40,9 +40,7 @@ const Prescription = () => {
       </div>
         <img className='script-show-poster' src={show.image} alt='show poster'/>
       <div className='bottom-container'>
-          <p>Write a message for the prescription:</p>
           <p>{prescription.message}</p>
-    
       </div>
     </div>
   );
