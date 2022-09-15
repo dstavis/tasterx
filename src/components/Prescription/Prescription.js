@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import './Prescription.css';
 import rxLogo from '../../assets/RX-logo.svg';
 import { getShowById, getPrescription } from '../../api-calls/api-calls';
-import { formatShowSearch } from '../../utility-functions/utility-functions';
 
 const Prescription = () => {
   const [show, setShow] = useState({});
