@@ -43,6 +43,7 @@ const Prescription = () => {
       </div>
       <div className='bottom-container'>
           <p>{prescription.message}</p>
+          <p>{prescription.signature}</p>
       </div>
     </section>
   );
