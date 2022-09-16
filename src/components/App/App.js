@@ -4,6 +4,7 @@ import Form from '../Form/Form';
 import Search from '../Search/Search';
 import Instructions from '../Instructions/Instructions';
 import Prescription from '../Prescription/Prescription';
+import ShareButton from '../ShareButton/ShareButton';
 import Header from '../Header/Header';
 import ShowDetails from '../ShowDetails/ShowDetails';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
@@ -14,6 +15,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 function App() {
   const [show, setShow] = useState({});
   const [message, setMessage] = useState('');
+  const [signature, setSignature] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
   
@@ -34,13 +36,15 @@ function App() {
     })
   }
 
-  const setPersonalMessage = (message) => {
+  const setPersonalMessage = (message, signature) => {
     setMessage(message);
+    setSignature(signature);
     postPrescription({
       message: message,
+      signature: signature,
       showID: show.showID
     })
-    .then(data => {      
+    .then(data => {
       setShow(data.prescription);
       navigate(`/prescription/${data.prescription.id}`);
     })
@@ -52,6 +56,7 @@ function App() {
   const resetState = () => {
     setShow({});
     setMessage('');
+    setSignature('');
     setError('');
   }
 
@@ -78,6 +83,7 @@ function App() {
           <div>
             <Header />
             <main className='prescription-container'>
+              <ShareButton />
               <Prescription />
               <button className='make-new-script' onClick={() => navigate('/')}>Write a new prescription</button>
             </main>
