@@ -4,6 +4,7 @@ import Form from '../Form/Form';
 import Search from '../Search/Search';
 import Instructions from '../Instructions/Instructions';
 import Prescription from '../Prescription/Prescription';
+import ShareButton from '../ShareButton/ShareButton';
 import Header from '../Header/Header';
 import ShowDetails from '../ShowDetails/ShowDetails';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
@@ -77,6 +78,7 @@ function App() {
         <Route exact path='/prescription/:id' element={
           <main className='prescription-container'>
             <Header />
+            <ShareButton />
             <Prescription />
             <button className='make-new-script' onClick={() => navigate('/')}>Write a new prescription</button>
           </main>
