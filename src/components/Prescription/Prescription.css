@@ -34,7 +34,7 @@
 .top-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 66%;
     height: 50%;
 }
@@ -54,6 +54,6 @@
 }
 
 .script-show-name {
-    font-size: 400%;
+    font-size: 300%;
 }
   
