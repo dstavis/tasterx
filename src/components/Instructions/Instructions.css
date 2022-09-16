@@ -1,9 +1,11 @@
 .instructions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 100%;
-  width: 90%;
-  font-size: 1vw;
+  padding: 5px;
+}
+
+/* Small devices */
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.3em;
+  }
 }

@@ -10,3 +10,16 @@
 .search-button {
   margin-left: 2%;
 }
+
+/* Small devices */
+
+@media (max-width: 576px) {
+  .search-input {
+    width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+    margin: 0;
+  }
+}
