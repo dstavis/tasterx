@@ -30,7 +30,8 @@
 
   .title-logo {
     position: static;
-    height: 100%;
+    width: 127px;
+    height: 71px;
   }
 
   .logo {
