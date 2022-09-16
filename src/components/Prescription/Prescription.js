@@ -28,10 +28,11 @@ const Prescription = () => {
   },[])
 
   return (
-    <div className='script-container'>
+    <section className='script-container'>
       <div className='top-container'> 
+        <div className='logo-show-details-container'>
         <div className='logo-and-prompt'>
-          <img className='script-logo' src={rxLogo} alt='rx logo' />
+          <img className='rx-logo' src={rxLogo} alt='rx logo' />
           <p className='to-be-prescribed'>Show to be prescribed:</p>
         </div>
         <p className='script-show-name'>{show.name}</p>
@@ -39,10 +40,11 @@ const Prescription = () => {
         {!show.officialSite && <a href={`https://www.google.com/search?q=${show.name}`} target='_blank'>{`Search google for ${show.name}`}</a>}
       </div>
         <img className='script-show-poster' src={show.image} alt='show poster'/>
+      </div>
       <div className='bottom-container'>
           <p>{prescription.message}</p>
       </div>
-    </div>
+    </section>
   );
 }
 

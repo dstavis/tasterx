@@ -14,9 +14,28 @@
   top: 1%;
   left: 2%;
   transform: rotate(-5deg);
-  transition: .3s;
-}
+} 
 
 .title-logo:hover {
   transform: scale(1.05) rotate(-3deg)
+}
+
+@media (max-width: 576px) { 
+  .header {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 10vh;
+  }
+
+  .title-logo {
+    position: static;
+    width: 127px;
+    height: 71px;
+  }
+
+  .logo {
+    position: static;
+    height: 100%;
+  }
 }

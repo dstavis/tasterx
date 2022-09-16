@@ -59,27 +59,27 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path='/' element={
-          <div className='home-page'>
+          <main className='home-page'>
             <Header />
-            <div className='search-form-container'>
+            <section className='search-form-container'>
               {error && <ErrorMessage error={error} />}
               <Search searchForShow={searchForShow} />
               <div className='prescription-preview'>
                 <ShowDetails name={show.name} image={show.image} error={error} />
                 <Form setPersonalMessage={setPersonalMessage} hasShow={show.showID} id={show.id} resetAppState={resetState} />
               </div>
-            </div>
-            <div className='instructions-container'>
+            </section>
+            <article className='instructions-container'>
               <Instructions />
-            </div>
-          </div>
+            </article>
+          </main>
         }/>
         <Route exact path='/prescription/:id' element={
-          <div className='prescription-page'>
+          <main className='prescription-container'>
             <Header />
             <Prescription />
             <button className='make-new-script' onClick={() => navigate('/')}>Write a new prescription</button>
-          </div>
+          </main>
         }/>
       </Routes>
     </div>
