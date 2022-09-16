@@ -1,17 +1,25 @@
+.instruction-logo-container {
+  padding-bottom: 20vh;
+}
+
 .instructions-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 50%;
-  width: 25%;
-  margin: 10% 0% 0% 5%;
+  width: 25vw;
+  max-width: 400px;
+  padding: 7px;
+  margin-left: 20px;
+  text-align: left;
   border: 3px solid black;
   border-radius: 10px;
   background-color: white;
 }
 
-.instructions {
-  padding: 5px;
+.logo {
+  height: 20vh;
+  transform: rotate(20deg);
+}
+
+h1 {
+  text-align: center;
 }
 
 /* Small devices */
@@ -19,5 +27,14 @@
 @media (max-width: 576px) {
   h1 {
     font-size: 1.3em;
+    margin: 0;
+  }
+
+  .instructions-container {
+    width: 90vw;
+    height: 30vh;
+    max-height: 200px;
+    margin: 0;
+    padding: 0;
   }
 }

@@ -58,26 +58,30 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route exact path='/' element={
-          <main className='home-page'>
+        <Route exact path='/' element={ 
+          <div>
             <Header />
-            <section className='search-form-container'>
-              {error && <ErrorMessage error={error} />}
-              <Search searchForShow={searchForShow} />
-              <div className='prescription-preview'>
-                <ShowDetails name={show.name} image={show.image} error={error} />
-                <Form setPersonalMessage={setPersonalMessage} hasShow={show.showID} id={show.id} resetAppState={resetState} />
-              </div>
-            </section>
-            <Instructions />
-          </main>
+            <main className='home-page'>
+              <section className='prescription-preview-container'>
+                {error && <ErrorMessage error={error} />}
+                <Search searchForShow={searchForShow} />
+                <div className='prescription-preview'>
+                  <ShowDetails name={show.name} image={show.image} error={error} />
+                  <Form setPersonalMessage={setPersonalMessage} hasShow={show.showID} id={show.id} resetAppState={resetState} />
+                </div>
+              </section>
+              <Instructions />
+            </main>
+          </div>
         }/>
         <Route exact path='/prescription/:id' element={
-          <main className='prescription-container'>
+          <div>
             <Header />
-            <Prescription />
-            <button className='make-new-script' onClick={() => navigate('/')}>Write a new prescription</button>
-          </main>
+            <main className='prescription-container'>
+              <Prescription />
+              <button className='make-new-script' onClick={() => navigate('/')}>Write a new prescription</button>
+            </main>
+          </div>
         }/>
       </Routes>
     </div>

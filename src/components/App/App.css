@@ -8,19 +8,18 @@
 
 .home-page {
   display: flex;
+  align-items: center;
   justify-content: center;
-  height: 85%;
-  width: 90%;
-  margin: 10% 0% 0% 5%;
+  width: 100%;
 }
 
-.search-form-container {
+.prescription-preview-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 70vh;
-  width: 45vw;
-  margin-bottom: 2%;
+  width: 700px;
+  margin-top: 20vh;
 }
 
 .prescription-preview {
@@ -32,6 +31,14 @@
   border: 3px solid black;
   border-radius: 10px;
   background-color: white;
+}
+
+.prescription-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .make-new-script {
@@ -48,18 +55,13 @@
 @media (max-width: 576px) {
   .home-page {
     flex-direction: column;
-    align-items: center;
     margin: 0;
   }
 
-  .instructions-container {
+  .prescription-preview-container {
     margin: 0 0 20px 0;
-    width: 100%;
-  }
-
-  .search-form-container {
+    width: 90vw;
     order: 2;
-    width: 100%;
   }
 
   .prescription-preview {
@@ -70,7 +72,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   .prescription-page {
