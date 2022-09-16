@@ -15,6 +15,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 function App() {
   const [show, setShow] = useState({});
   const [message, setMessage] = useState('');
+  const [signature, setSignature] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
   
@@ -35,13 +36,15 @@ function App() {
     })
   }
 
-  const setPersonalMessage = (message) => {
+  const setPersonalMessage = (message, signature) => {
     setMessage(message);
+    setSignature(signature);
     postPrescription({
       message: message,
+      signature: signature,
       showID: show.showID
     })
-    .then(data => {      
+    .then(data => {
       setShow(data.prescription);
       navigate(`/prescription/${data.prescription.id}`);
     })
@@ -53,6 +56,7 @@ function App() {
   const resetState = () => {
     setShow({});
     setMessage('');
+    setSignature('');
     setError('');
   }
 
