@@ -19,7 +19,7 @@ const getShowById = (endpoint) => {
 }
 
 const getPrescription = (endpoint) => {
-    return fetch(`https://localhost:3002/prescriptions/${endpoint}`)
+    return fetch(`https://tasterx-api.heroku.com/prescriptions/${endpoint}`)
         .then(response => {
             if(!response.ok) {
                 throw new Error('Sorry, looks like we can\'t find this prescription.');
@@ -29,7 +29,7 @@ const getPrescription = (endpoint) => {
 }
 
 const postPrescription = (body) => {
-    return fetch("https://localhost:3002/prescriptions/", {
+    return fetch("https://tasterx-api.heroku.com/prescriptions/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
