@@ -19,7 +19,7 @@
   flex-direction: column;
   align-items: center;
   height: 70vh;
-  width: 45%;
+  width: 45vw;
   margin-bottom: 2%;
 }
 
@@ -29,17 +29,6 @@
   justify-content: flex-end;
   height: 100%;
   width: 100%;
-  border: 3px solid black;
-  border-radius: 10px;
-  background-color: white;
-}
-
-.instructions-container {
-  display: flex;
-  justify-content: center;
-  height: 50%;
-  width: 25%;
-  margin: 10% 0% 0% 5%;
   border: 3px solid black;
   border-radius: 10px;
   background-color: white;

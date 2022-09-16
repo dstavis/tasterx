@@ -69,9 +69,7 @@ function App() {
                 <Form setPersonalMessage={setPersonalMessage} hasShow={show.showID} id={show.id} resetAppState={resetState} />
               </div>
             </section>
-            <article className='instructions-container'>
-              <Instructions />
-            </article>
+            <Instructions />
           </main>
         }/>
         <Route exact path='/prescription/:id' element={

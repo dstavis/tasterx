@@ -10,52 +10,40 @@
     border-radius: 10px;
 }
 
-.top-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.script-top-container {
     width: 100%;
-    height: 50%;
+    height: 70%;
+    display: flex;
+    border-bottom: 3px black solid;
 }
 
-.logo-and-prompt {
-    display: flex;
-    justify-content: space-between;
-    height:45%;
-    width:100%;
-    align-items: center;
- }
+.script-rx-logo {
+    height: 20%;
+    aspect-ratio: auto;
+    border: 1px solid black;
+    margin: 2%;
+}
 
- .logo-show-details-container {
-    padding-left: 5%;
- }
+.show-name-link-container {
+
+}
 
 .script-show-poster {
-    height: 90%;
+    height: 60%;
     margin: 3%;
     aspect-ratio: auto;
     border-radius: 10px;
-}
-  
-.script-logo {
-    height: 65%;
-    width: 16%;
-    border: 1px solid black;
-    margin-left: 1.8%;
-    margin-bottom: 6%;
-}
-
-.bottom-container {
-    border-top: black solid 2px;
-    height:50%;
-    align-content: center;
-    width: 100%
 }
 
 .script-show-name {
     font-size: 1.4em;
 }
   
+.script-message {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
 /* Small devices */
 
 @media (max-width: 576px) {
@@ -65,7 +53,6 @@
     }
 
     .script-show-poster {
-        height: 70%;
-        margin: 15% 10px;
+        height: 60%;
     }
 }
