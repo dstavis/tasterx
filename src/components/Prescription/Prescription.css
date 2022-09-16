@@ -45,20 +45,6 @@
     margin-bottom: 6%;
 }
 
-.to-be-prescribed {
-    margin-right:35%;
-    margin-top: 7%;
-    font-size: 135%;
-}
-
-.top-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 66%;
-    height: 50%;
-}
-
 .bottom-container {
     border-top: black solid 2px;
     height:50%;
