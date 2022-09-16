@@ -14,6 +14,10 @@
   top: 1%;
   left: 2%;
   transform: rotate(-5deg);
+} 
+
+.title-logo:hover {
+  transform: scale(1.05) rotate(-3deg)
 }
 
 @media (max-width: 576px) { 
