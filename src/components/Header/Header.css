@@ -1,19 +1,27 @@
 .header {
   position: absolute;
   display: flex;
-  height: 180px;
+  justify-content: space-around;
+  height: 150px;
+  width: 100%;
   padding-top: 10px;
   margin-bottom: 5vh;
 }
 
+.title-logo-link {
+  width: 50%;
+}
+
 .title-logo {
-  align-self: flex-start; 
   height: 100%;
-  margin: 0 10vw 0 -30px;
 } 
 
 .title-logo:hover {
   transform: scale(1.05) rotate(-3deg)
+}
+
+.logo {
+  height: 100%;
 }
 
 @media (max-width: 576px) { 

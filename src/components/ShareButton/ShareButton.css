@@ -1,47 +1,32 @@
 .share-button {
-  border-radius: 15px;
-  border: 4px solid black;
-  display: flex;
-  flex-direction: column;
-
-  height: 90px;
-  padding: 0px;
-  width: 250px;
-}
-
-.share-button:hover {
-  background-color: orange;
+  padding: 0;
+  margin-bottom: 10px;
+  border: 3px solid black;
+  border-radius: 10px;
   cursor: pointer;
 }
 
-.share-button:active {
-  background-color: purple;
+.share-button:hover {
+  transform: scale(1.05);
 }
 
 .url-container {
-  height: 50%;
-  border-bottom: black solid 4px;
-  width: 100%;
-  padding: 5px;
-  padding-top: 7px;
-  padding-bottom: 7px;  
+  padding: 0 2px;
+  margin: 0;
 }
 
 .split-row {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0;
+  border-top: 3px solid black;
+  background-color: #ef23b5;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
 }
 
 .button-label {
-  padding: 10px;
-  margin-right: 10%;
+  padding: 2px;
+  margin: 0;
 }
 
 .link-icon {
-  display: inline;
-  border-left: black dashed 4px;
-  padding: 10px;
+  font-size: large;
 }

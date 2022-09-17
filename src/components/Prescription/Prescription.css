@@ -1,3 +1,11 @@
+.script-share-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+}
+
 .script-container {
     display: flex;
     flex-direction: column;
@@ -7,7 +15,6 @@
     border: 3px solid black;
     border-radius: 10px;
     background-color: white;
-    margin-top: 20vh;
 }
 
 .script-top-container {
