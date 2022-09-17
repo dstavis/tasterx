@@ -34,7 +34,7 @@ describe('Prescription component', () => {
       cy.get('[class*=script-show-name]').contains('Game of Thrones')
       cy.get('a').should('have.attr', 'href')
       cy.get('[class*=show-link]').should('have.attr', 'href', 'http://www.hbo.com/game-of-thrones')
-      cy.get('img').should('have.attr', 'src', '/static/media/TasteRX-title-logo.b017ab2f38ebce984355f68c1c1f3cf2.svg')
+      cy.get('[class*=script-show-poster]').should('have.attr', 'src', 'https://static.tvmaze.com/uploads/images/medium_portrait/190/476117.jpg')
       cy.get('[class*=bottom-container]').contains('message for patient')
   })
 
@@ -52,7 +52,7 @@ describe('Prescription component', () => {
     cy.get('[class*=script-show-name]').contains('Game of Thrones')
     cy.get('a').should('have.attr', 'href')
     cy.get('[class*=show-link]').should('have.attr', 'href', 'http://www.hbo.com/game-of-thrones')
-    cy.get('img').should('have.attr', 'src', '/static/media/TasteRX-title-logo.b017ab2f38ebce984355f68c1c1f3cf2.svg')
+    cy.get('[class*=script-show-poster]').should('have.attr', 'src', 'https://static.tvmaze.com/uploads/images/medium_portrait/190/476117.jpg')
     cy.get('[class*=bottom-container]').contains('message for patient')
     cy.get('[class*=make-new-script]').click()
     cy.url().should('include', '/')
