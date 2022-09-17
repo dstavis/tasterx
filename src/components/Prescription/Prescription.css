@@ -80,6 +80,11 @@
     }
 
     .script-show-poster {
+        margin: 0 5px 0 0;
         height: 60%;
+    }
+
+    .bottom-container {
+        padding: 10px;
     }
 }
