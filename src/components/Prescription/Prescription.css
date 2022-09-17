@@ -14,7 +14,9 @@
     width: 700px;
     border: 3px solid black;
     border-radius: 10px;
-    background-color: white;
+    background-image: url('https://www.pospaper.com/pub/media/catalog/product/cache/950b5f8b315bb35556069039ec8c4176/8/-/8-1-2-x-11-full-sheet-blue-rx-paper-11.jpg');
+    background-size: 101% 100.5%;
+    background-position: 50% 100%;
 }
 
 .script-top-container {
@@ -61,11 +63,27 @@
     border-radius: 10px;
     margin-right: 40px;
 }
+
+.bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 80%;
+}
   
 .script-message {
+    height: 50%;
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
     text-align: center;
+}
+
+.script-signature {
+    margin: 10px 20px 25px 0px;
+    text-align: right;
+    font-family: 'Brush Script MT';
+    font-size: 1.3em;
 }
 /* Small devices */
 

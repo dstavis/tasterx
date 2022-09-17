@@ -22,7 +22,9 @@
   width: 100%;
   border: 3px solid black;
   border-radius: 10px;
-  background-color: white;
+  background-image: url('https://www.pospaper.com/pub/media/catalog/product/cache/950b5f8b315bb35556069039ec8c4176/8/-/8-1-2-x-11-full-sheet-blue-rx-paper-11.jpg');
+  background-size: 101% 100.5%;
+  background-position: 50% 100%;
 }
 
 .prescription-container {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import './Prescription.css';
 import rxLogo from '../../assets/RX-logo.svg';
@@ -9,8 +9,10 @@ const Prescription = () => {
   const [show, setShow] = useState({});
   const [prescription, setPrescription] = useState('');
   const { id }  = useParams();
+  const appStateReset = useRef(false);
 
   useEffect(() => {
+    if (!appStateReset.current) {
     getPrescription(id)
       .then(data => {
         setPrescription(data.prescription);
@@ -26,7 +28,9 @@ const Prescription = () => {
           .catch(error => console.log(error));      
         })
         .catch(error => console.log(error));
-  },[])
+        appStateReset.current = true;
+    }
+  }, [id])
 
   return (
     <section className='script-share-button-container'>
@@ -43,8 +47,8 @@ const Prescription = () => {
           <img className='script-show-poster' src={show.image} alt='show poster'/>
         </div>
         <div className='bottom-container'>
-          <p>{prescription.message}</p>
-          <p>{prescription.signature}</p>
+          <p className='script-message'>{prescription.message}</p>
+          <p className='script-signature'>{prescription.signature}</p>
         </div>
       </div>
     </section>
