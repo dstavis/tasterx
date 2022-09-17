@@ -40,7 +40,7 @@ describe('Prescription component', () => {
 
   it('should allow user to go back to main by clicking on the TasteRx logo', () => {
     cy.get('[alt="title logo"]').click()
-    cy.url().should('include', '/')
+    cy.url().should('not.include', '/prescription/1')
   })
 
   it('should allow user to go back to main by clicking write a new prescription', () => {
@@ -55,6 +55,7 @@ describe('Prescription component', () => {
     cy.get('[class*=script-show-poster]').should('have.attr', 'src', 'https://static.tvmaze.com/uploads/images/medium_portrait/190/476117.jpg')
     cy.get('[class*=bottom-container]').contains('message for patient')
     cy.get('[class*=make-new-script]').click()
-    cy.url().should('include', '/')
+    cy.url().should('not.include', '/prescription/1')
+
   })
 })

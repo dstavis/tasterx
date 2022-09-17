@@ -42,7 +42,7 @@ const Prescription = () => {
         <img className='script-show-poster' src={show.image} alt='show poster'/>
       </div>
       <div className='bottom-container'>
-          <p>{prescription.message}</p>
+        <p>{prescription.message}</p>
       </div>
     </section>
   );
