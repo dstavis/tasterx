@@ -34,15 +34,19 @@
 }
 
 .make-new-script {
-  height: 8%;
-  width: 23%;
-  margin: 3% 0% 8% 0%;
+  margin-top: 10px;
+  padding: 8px 10px;
   border-radius: 30px;
   cursor: pointer;
   background-color: white;
-  transition: .3s;
-  text-align: center;
+  border: 3px solid black;
+  transition: all 0.2s ease-in-out;
 }
+
+.make-new-script:hover {
+  background-color: #ef23b5;
+}
+
 /* Small devices */
 @media (max-width: 576px) {
   .home-page {

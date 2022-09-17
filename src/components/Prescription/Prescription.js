@@ -34,11 +34,11 @@ const Prescription = () => {
       <div className='script-container'>
         <div className='script-top-container'>
           <img className='script-rx-logo' src={rxLogo} alt='rx logo' />
+        <div className='show-name-link-container'>
           <p className='to-be-prescribed'>Show to be prescribed:</p>
-          <div className='show-name-link-container'>
           <p className='script-show-name'>{show.name}</p>
-          {show.officialSite && <a href={show.officialSite} target='_blank'>Official TV show website</a>}
-          {!show.officialSite && <a href={`https://www.google.com/search?q=${show.name}`} target='_blank'>{`Search google for ${show.name}`}</a>}
+          {show.officialSite && <a className='show-link' href={show.officialSite} target='_blank'>Official TV show website</a>}
+          {!show.officialSite && <a className='show-link' href={`https://www.google.com/search?q=${show.name}`} target='_blank'>{`Search google for ${show.name}`}</a>}
         </div>
           <img className='script-show-poster' src={show.image} alt='show poster'/>
         </div>
