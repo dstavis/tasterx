@@ -1,3 +1,7 @@
+const stagingHostname = "https://tasterx-api-staging.herokuapp.com"
+const productionHostname = "https://tasterx-api.herokuapp.com"
+const localHostname = "http://localhost:3000"
+
 const getShow = (endpoint) => {
     return fetch(`https://api.tvmaze.com/singlesearch/shows?q=${endpoint}`)
         .then(response => {
@@ -19,7 +23,7 @@ const getShowById = (endpoint) => {
 }
 
 const getPrescription = (endpoint) => {
-    return fetch(`https://tasterx-api.herokuapp.com/prescriptions/${endpoint}`)
+    return fetch(`${stagingHostname}/prescriptions/${endpoint}`)
         .then(response => {
             if(!response.ok) {
                 throw new Error('Sorry, looks like we can\'t find this prescription.');
@@ -29,7 +33,7 @@ const getPrescription = (endpoint) => {
 }
 
 const postPrescription = (body) => {
-    return fetch("https://tasterx-api.herokuapp.com/prescriptions/", {
+    return fetch(`${stagingHostname}/prescriptions/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
