@@ -14,8 +14,7 @@ const ShareButton = () => {
         <p className='rx-url'>{currentURL.substring(0, 30) + "..."}</p>
       </div>
       <div className='split-row'>
-        <p className='button-label'>Copy Share Link</p>
-        <p className='link-icon'>🔗</p>
+        <p className='button-label'>Copy Share Link <span className='link-icon'>🔗</span></p>
       </div>
     </button>
   )

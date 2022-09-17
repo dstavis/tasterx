@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <div className="header">
+    <header className="header">
       <Link to='/' className='title-logo-link'>
         <img className='title-logo' src={titleLogo} alt='title logo' />
       </Link>
       <img className='logo' src={logo} alt='logo' />
-    </div>
+    </header>
   )
 }
 

@@ -1,5 +1,21 @@
-.instructions {
-  padding: 5px;
+.instructions-container {
+  width: 25vw;
+  max-width: 400px;
+  padding: 7px;
+  margin-left: 20px;
+  text-align: left;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.logo {
+  height: 20vh;
+  transform: rotate(20deg);
+}
+
+h1 {
+  text-align: center;
 }
 
 /* Small devices */
@@ -7,5 +23,14 @@
 @media (max-width: 576px) {
   h1 {
     font-size: 1.3em;
+    margin: 0;
+  }
+
+  .instructions-container {
+    width: 90vw;
+    height: 30vh;
+    max-height: 200px;
+    margin: 0;
+    padding: 0;
   }
 }
