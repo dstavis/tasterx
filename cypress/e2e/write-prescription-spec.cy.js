@@ -11,8 +11,8 @@ const tvmazeSearchStub = JSON.stringify({
 const ourStub = JSON.stringify({
   "prescription": {
     "id": "1",
-    "show_id": "82",
-    "message": "wow"
+    "showID": "82",
+    "message": "message for patient"
   }
 })
 
@@ -20,7 +20,9 @@ const tvmazeIndividualStub = tvmazeSearchStub
 
 beforeEach(()=>{
   cy.intercept("https://api.tvmaze.com/singlesearch/shows?q=game+of+thrones", tvmazeSearchStub)
-  cy.intercept("POST", "https://tasterx.herokuapp.com/prescriptions/", ourStub)
+  cy.intercept("POST", "https://tasterx-api.herokuapp.com/prescriptions/", ourStub)
+  cy.intercept("GET", "https://tasterx-api.herokuapp.com/prescriptions/1", ourStub)
+
   cy.intercept("https://api.tvmaze.com/shows/82", tvmazeIndividualStub)
 
 })

@@ -9,7 +9,7 @@
 }
 
 .title-logo-link {
-  width: 50%;
+  width: 16%;
 }
 
 .title-logo {
@@ -17,7 +17,7 @@
 } 
 
 .title-logo:hover {
-  transform: scale(1.05) rotate(-3deg)
+  transform: scale(1.05) rotate(-3deg) 
 }
 
 .logo {
@@ -30,6 +30,10 @@
     width: 100vw;
     height: 17vh;
     margin: 0;
+  }
+
+  .title-logo-link {
+    width: 50%;
   }
 
   .title-logo {

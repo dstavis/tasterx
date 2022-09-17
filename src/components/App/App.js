@@ -63,7 +63,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path='/' element={ 
-          <div>
+          <>
             <Header />
             <main className='home-page'>
               <section className='prescription-preview-container'>
@@ -76,16 +76,16 @@ function App() {
               </section>
               <Instructions />
             </main>
-          </div>
+          </>
         }/>
         <Route exact path='/prescription/:id' element={
-          <div>
+          <>
             <Header />
             <main className='prescription-container'>
               <Prescription />
               <button className='make-new-script' onClick={() => navigate('/')}>Write a new prescription</button>
             </main>
-          </div>
+          </>
         }/>
       </Routes>
     </div>
