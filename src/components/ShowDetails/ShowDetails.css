@@ -1,21 +1,16 @@
 .show-details {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-content: center;
+  width: 100%;
   height: 55%;
   border-bottom: 2px solid black;
 }
 
-.prescription-pad {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.rx-and-prompt {
-  display: flex;
-  height: 50%;
+.prompt-show-name-container {
+  margin-top: 10px;
+  white-space: nowrap;
+  text-align: left;
 }
 
 .prompt {
@@ -23,20 +18,28 @@
 }
 
 .rx-logo {
-  height: 60%;
+  height: 30%;
   aspect-ratio: auto;
   border: 1px solid black;
   margin: 2%;
 }
 
+.prompt-show-name-image-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
 .show-name {
   font-size: 1.5em;
-  margin-top: 3%;
+
 }
 
 .show-poster {
-  height: 90%;
-  margin: 10% 10px;
+  margin: auto;
+  align-self: flex-end;
+  height: 80%;
   aspect-ratio: auto;
   border-radius: 10px;
 }
@@ -44,17 +47,30 @@
 /* Small devices */
 
 @media (max-width: 576px) {
-  .poster-container {
-    height: 70%;
-    margin: 15% 10px;
+  .prompt-show-name-image-container {
+    flex-direction: column;
+  }
+
+  .prompt-show-name-container {
+    text-align: center;
   }
 
   .show-name {
     font-size: 1em;
   }
 
+  .rx-logo {
+    height: 30%;
+  }
+
   .prompt {
     white-space: normal;
     margin: 0;
+  }
+
+  .show-poster {
+    margin: 0 0 20px 0;
+    align-self: center;
+    height: 60%;
   }
 }

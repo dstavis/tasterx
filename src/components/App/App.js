@@ -14,6 +14,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 function App() {
   const [show, setShow] = useState({});
   const [message, setMessage] = useState('');
+  const [signature, setSignature] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
   
@@ -34,13 +35,15 @@ function App() {
     })
   }
 
-  const setPersonalMessage = (message) => {
+  const setPersonalMessage = (message, signature) => {
     setMessage(message);
+    setSignature(signature);
     postPrescription({
       message: message,
+      signature: signature,
       showID: show.showID
     })
-    .then(data => {      
+    .then(data => {
       setShow(data.prescription);
       navigate(`/prescription/${data.prescription.id}`);
     })
@@ -52,34 +55,37 @@ function App() {
   const resetState = () => {
     setShow({});
     setMessage('');
+    setSignature('');
     setError('');
   }
 
   return (
     <div className="App">
       <Routes>
-        <Route exact path='/' element={
-          <main className='home-page'>
+        <Route exact path='/' element={ 
+          <>
             <Header />
-            <section className='search-form-container'>
-              {error && <ErrorMessage error={error} />}
-              <Search searchForShow={searchForShow} />
-              <div className='prescription-preview'>
-                <ShowDetails name={show.name} image={show.image} error={error} />
-                <Form setPersonalMessage={setPersonalMessage} hasShow={show.showID} id={show.id} resetAppState={resetState} />
-              </div>
-            </section>
-            <article className='instructions-container'>
+            <main className='home-page'>
+              <section className='prescription-preview-container'>
+                {error && <ErrorMessage error={error} />}
+                <Search searchForShow={searchForShow} />
+                <div className='prescription-preview'>
+                  <ShowDetails name={show.name} image={show.image} error={error} />
+                  <Form setPersonalMessage={setPersonalMessage} hasShow={show.showID} id={show.id} resetAppState={resetState} />
+                </div>
+              </section>
               <Instructions />
-            </article>
-          </main>
+            </main>
+          </>
         }/>
         <Route exact path='/prescription/:id' element={
-          <main className='prescription-container'>
+          <>
             <Header />
-            <Prescription />
-            <button className='make-new-script' onClick={() => navigate('/')}>Write a new prescription</button>
-          </main>
+            <main className='prescription-container'>
+              <Prescription />
+              <button className='make-new-script' onClick={() => navigate('/')}>Write a new prescription</button>
+            </main>
+          </>
         }/>
       </Routes>
     </div>

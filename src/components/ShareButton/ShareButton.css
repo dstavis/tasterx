@@ -1,0 +1,33 @@
+.share-button {
+  padding: 0;
+  margin-bottom: 10px;
+  border: 3px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.share-button:hover {
+  transform: scale(1.05);
+}
+
+.url-container {
+  padding: 0 2px;
+  margin: 0;
+}
+
+.split-row {
+  border-top: 3px solid black;
+  background-color: #ef23b5;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.button-label {
+  padding: 2px;
+  margin: 0;
+}
+
+.link-icon {
+  font-size: large;
+}

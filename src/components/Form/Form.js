@@ -3,6 +3,7 @@ import './Form.css';
 
 const Form = ({ setPersonalMessage, resetAppState, hasShow }) => {
   const [message, setMessage] = useState('');
+  const [signature, setSignature] = useState('');
   const appStateReset = useRef(false);
 
   useEffect(() => {
@@ -14,8 +15,9 @@ const Form = ({ setPersonalMessage, resetAppState, hasShow }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setPersonalMessage(message);
+    setPersonalMessage(message, signature);
     setMessage('');
+    setSignature('');
   }
 
   return (
@@ -29,7 +31,19 @@ const Form = ({ setPersonalMessage, resetAppState, hasShow }) => {
         value={message}
         onChange={(event) => setMessage(event.target.value)}
       />
-      <button type='submit' className='submit-button' disabled={!message || !hasShow}>Submit</button>
+
+      <label htmlFor='signature'>Prescribed by:</label>
+      <input
+        className='signature-input'
+        id='signature'
+        type='text'
+        name='signature'
+        placeholder='Doctor [...]'
+        value={signature}
+        onChange={(event) => setSignature(event.target.value)}
+      />
+
+      <button type='submit' className='submit-button' disabled={!message || !hasShow || !signature}>Submit</button>
     </form>
   )
 }

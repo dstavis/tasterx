@@ -6,11 +6,36 @@
 }
 
 .text-area {
-  height: 70%;
-  width: 60%;
+  height: 40%;
+  width: 70%;
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
 .submit-button {
-  width: 30%;
-  margin-top: 2%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 8px 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid black;
+  transition: all 0.2s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #ef23b5;
+}
+
+.submit-button:disabled {
+  background-color: white;
+  cursor: not-allowed;
+}
+
+.signature-input {
+  width: 60%;
+  padding: 7px;
+  text-align: center;
+  border-radius: 20px;
+  border: 2px solid black;
 }
