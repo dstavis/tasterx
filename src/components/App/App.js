@@ -93,7 +93,7 @@ function App() {
         <Route path='*' element={
           <>
             <Header />
-            <h1>404: Not found</h1>
+            <h1 className='not-found-message'>404: Not found</h1>
             <button className='make-new-script' onClick={ () => navigate('/') } >Back to TasteRX</button>
           </>
         }/>
