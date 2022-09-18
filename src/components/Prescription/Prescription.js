@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState, useRef } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import './Prescription.css';
 import rxLogo from '../../assets/RX-logo.svg';
 import ShareButton from '../ShareButton/ShareButton';
@@ -8,25 +8,33 @@ import { getShowById, getPrescription } from '../../api-calls/api-calls';
 const Prescription = () => {
   const [show, setShow] = useState({});
   const [prescription, setPrescription] = useState('');
+  const appStateReset = useRef(false);
   const { id }  = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    getPrescription(id)
-      .then(data => {
-        setPrescription(data.prescription);
-        getShowById(data.prescription.showID)
-          .then(data => {
-            const { name, officialSite, image } = data;
-            setShow({
-              name: name,
-              officialSite: officialSite,
-              image: image.medium
-            })
-          })    
-          .catch(error => console.log(error));      
-        })
-        .catch(error => console.log(error));
-  },[])
+    if(!parseInt(id)) {
+      navigate('/prescription/prescription-not-found');
+      appStateReset.current = true;
+    } else if (!appStateReset.current) {
+      getPrescription(id)
+        .then(data => {
+          setPrescription(data.prescription);
+          getShowById(data.prescription.showID)
+            .then(data => {
+              const { name, officialSite, image } = data;
+              setShow({
+                name: name,
+                officialSite: officialSite,
+                image: image.medium
+              })
+            })    
+            .catch(() => navigate('/prescription/prescription-not-found'));      
+          })
+          .catch(() => navigate('/prescription/prescription-not-found'));
+          appStateReset.current = true;
+        }
+  }, [navigate, id]);
 
   return (
     <section className='script-share-button-container'>
@@ -43,8 +51,8 @@ const Prescription = () => {
           <img className='script-show-poster' src={show.image} alt='show poster'/>
         </div>
         <div className='bottom-container'>
-          <p>{prescription.message}</p>
-          <p>{prescription.signature}</p>
+          <p className='script-message'>{prescription.message}</p>
+          <p className='script-signature'>{prescription.signature}</p>
         </div>
       </div>
     </section>
