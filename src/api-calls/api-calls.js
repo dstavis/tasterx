@@ -1,6 +1,6 @@
 const stagingHostname = "https://tasterx-api-staging.herokuapp.com"
 const productionHostname = "https://tasterx-api.herokuapp.com"
-const localHostname = "http://localhost:3000"
+const localHostname = "http://localhost:3001"
 
 const getShow = (endpoint) => {
     return fetch(`https://api.tvmaze.com/singlesearch/shows?q=${endpoint}`)

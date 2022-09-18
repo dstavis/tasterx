@@ -1,6 +1,6 @@
 .instructions-container {
   width: 25vw;
-  max-width: 400px;
+  max-width: 600px;
   padding: 7px;
   margin-left: 20px;
   text-align: left;
@@ -18,19 +18,32 @@ h1 {
   text-align: center;
 }
 
+
 /* Small devices */
 
-@media (max-width: 576px) {
+@media (max-width: 1200px) {
   h1 {
     font-size: 1.3em;
     margin: 0;
   }
-
+  
   .instructions-container {
     width: 90vw;
     height: 30vh;
     max-height: 200px;
+    max-width: 600px;
     margin: 0;
     padding: 0;
   }
+}
+
+/* Medium screen-sizes */
+
+@media (600px <= width <= 1200px) {
+
+  .instructions-container {
+    max-height: 140px;
+    margin-bottom: 10px;
+  }
+
 }
