@@ -7,6 +7,7 @@ import Prescription from '../Prescription/Prescription';
 import Header from '../Header/Header';
 import ShowDetails from '../ShowDetails/ShowDetails';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
+import PrescriptionNotFound from '../PrescriptionNotFound/PrescriptionNotFound'
 import { formatShowSearch } from '../../utility-functions/utility-functions';
 import { getShow, postPrescription} from '../../api-calls/api-calls';
 import { Routes, Route, useNavigate } from 'react-router-dom';
@@ -86,6 +87,15 @@ function App() {
               <button className='make-new-script' onClick={() => navigate('/')}>Write a new prescription</button>
             </main>
           </>
+        }/>
+        <Route path='/prescription/prescription-not-found' element={
+             <>
+             <Header />
+             <main className='not-found-container'>
+               <PrescriptionNotFound />
+               <button className='make-new-script' onClick={() => navigate('/')}>Write a new prescription</button>
+             </main>
+           </>
         }/>
       </Routes>
     </div>
