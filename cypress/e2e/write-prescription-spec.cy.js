@@ -18,21 +18,21 @@ const ourStub = JSON.stringify({
 
 const tvmazeIndividualStub = tvmazeSearchStub
 
-beforeEach(()=>{
-  cy.intercept("https://api.tvmaze.com/singlesearch/shows?q=game+of+thrones", tvmazeSearchStub)
-  cy.intercept("POST", "https://tasterx-api.herokuapp.com/prescriptions/", ourStub)
-  cy.intercept("GET", "https://tasterx-api.herokuapp.com/prescriptions/1", ourStub)
-
-  cy.intercept("https://api.tvmaze.com/shows/82", tvmazeIndividualStub)
-
-})
 
 describe('prescription form', () => {
+  beforeEach(()=>{
+    cy.intercept("https://api.tvmaze.com/singlesearch/shows?q=game+of+thrones", tvmazeSearchStub)
+    cy.intercept("POST", "https://tasterx-api.herokuapp.com/prescriptions/", ourStub)
+    cy.intercept("GET", "https://tasterx-api.herokuapp.com/prescriptions/1", ourStub)
+    cy.intercept("https://api.tvmaze.com/shows/82", tvmazeIndividualStub)
+  })
+
   it('loads the page', () => {
     cy.visit('http://localhost:3000/')
-  })
+  })  
+
   it('lets the user search for a show by name and displays show info when submitted', () => {
-    cy.get("input").type("game of thrones").next().click()
+    cy.get(".search-input").type("game of thrones").next().click()
     cy.wait(200)
     cy.get("p.show-name").first().contains("Game of Thrones")
   })
@@ -40,10 +40,11 @@ describe('prescription form', () => {
   it('lets the user write a message to the patient', () => {
     cy.get("textarea").first().type("message for patient")
     cy.get("textarea").first().should("have.value", "message for patient")
+    cy.get(".signature-input").type("Dr. Brown").should("have.value", "Dr. Brown")
   })
 
   it('redirects to the correct page when submitted', () => {
-    cy.get(".submit-button").first().click()
+    cy.get(".submit-button").click()
     cy.url().should("include", "/prescription/1")
   })
 })

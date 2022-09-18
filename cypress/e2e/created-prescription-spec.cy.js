@@ -16,12 +16,12 @@ const ourAPIStub = JSON.stringify({
   }
 })
 
-beforeEach(()=>{
-  cy.intercept('https://tasterx-api.herokuapp.com/prescriptions/1', ourAPIStub)
-  cy.intercept('https://api.tvmaze.com/shows/82', tvmazeSearchStub)
-})
-
 describe('Prescription component', () => {
+  beforeEach(()=>{
+    cy.intercept('https://tasterx-api.herokuapp.com/prescriptions/1', ourAPIStub)
+    cy.intercept('https://api.tvmaze.com/shows/82', tvmazeSearchStub)
+  })
+  
   it('loads the page', () => {
     cy.visit('http://localhost:3000/prescription/1')
     cy.wait(200)
