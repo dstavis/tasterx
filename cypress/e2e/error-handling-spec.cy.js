@@ -34,7 +34,7 @@ describe('Error handling', () => {
             .contains('Error: Sorry, there was an error posting your information.')
         });
     
-    it('Should navigate to prescription not found page if not prescription is found', () => {
+    it('Should navigate to prescription not found page if no prescription is found', () => {
         cy.intercept('GET', 'https://tasterx-api.herokuapp.com/prescriptions/1000', {status: 404})
             .visit('http://localhost:3000/prescription/1000')
         
