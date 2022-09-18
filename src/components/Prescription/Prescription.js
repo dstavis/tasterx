@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import './Prescription.css';
 import rxLogo from '../../assets/RX-logo.svg';
 import ShareButton from '../ShareButton/ShareButton';
@@ -8,29 +8,33 @@ import { getShowById, getPrescription } from '../../api-calls/api-calls';
 const Prescription = () => {
   const [show, setShow] = useState({});
   const [prescription, setPrescription] = useState('');
-  const { id }  = useParams();
   const appStateReset = useRef(false);
+  const { id }  = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if (!appStateReset.current) {
-    getPrescription(id)
-      .then(data => {
-        setPrescription(data.prescription);
-        getShowById(data.prescription.showID)
-          .then(data => {
-            const { name, officialSite, image } = data;
-            setShow({
-              name: name,
-              officialSite: officialSite,
-              image: image.medium
-            })
-          })    
-          .catch(error => console.log(error));      
-        })
-        .catch(error => console.log(error));
-        appStateReset.current = true;
-    }
-  }, [id])
+    if(!parseInt(id)) {
+      navigate('/prescription/prescription-not-found');
+      appStateReset.current = true;
+    } else if (!appStateReset.current) {
+      getPrescription(id)
+        .then(data => {
+          setPrescription(data.prescription);
+          getShowById(data.prescription.showID)
+            .then(data => {
+              const { name, officialSite, image } = data;
+              setShow({
+                name: name,
+                officialSite: officialSite,
+                image: image.medium
+              })
+            })    
+            .catch(() => navigate('/prescription/prescription-not-found'));      
+          })
+          .catch(() => navigate('/prescription/prescription-not-found'));
+          appStateReset.current = true;
+        }
+  }, [navigate, id]);
 
   return (
     <section className='script-share-button-container'>
