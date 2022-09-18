@@ -55,10 +55,10 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <Routes>
         <Route exact path='/' element={ 
           <>
-            <Header />
             <main className='home-page'>
               <section className='prescription-preview-container'>
                 {error && <ErrorMessage error={error} />}
@@ -74,7 +74,6 @@ function App() {
         }/>
         <Route path='/prescription/:id' element={
           <>
-            <Header />
             <main className='prescription-container'>
               <Prescription />
               <button className='make-new-script' onClick={() => navigate('/')}>Write a new prescription</button>
@@ -83,7 +82,6 @@ function App() {
         }/>
         <Route path='/prescription/prescription-not-found' element={
              <>
-             <Header />
              <main className='not-found-container'>
               <h1 className="message">Oops... the requested prescription is not on file. Check the URL or contact your taste physician.</h1>
               <button className='make-new-script' onClick={() => navigate('/')}>Write a new prescription</button>
@@ -92,7 +90,6 @@ function App() {
         }/>
         <Route path='*' element={
           <>
-            <Header />
             <h1 className='not-found-message'>404: Not found</h1>
             <button className='make-new-script' onClick={ () => navigate('/') } >Back to TasteRX</button>
           </>
