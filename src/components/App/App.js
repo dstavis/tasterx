@@ -45,12 +45,10 @@ function App() {
       showID: show.showID
     })
     .then(data => {
-      console.log("navigate to created script", data.prescription)
       setShow(data.prescription);
       navigate(`/prescription/${data.prescription.id}`);
     })
     .catch(error => {
-      console.log(error)
       setError(error)
     });
   }

@@ -9,12 +9,11 @@ const Prescription = () => {
   const [show, setShow] = useState({});
   const [prescription, setPrescription] = useState('');
   const { id }  = useParams();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if(parseInt(id) === NaN) {
+    if(!parseInt(id)) {
       navigate('/prescription/prescription-not-found')
-      return 
     } else {
       getPrescription(id)
         .then(data => {
@@ -28,11 +27,11 @@ const Prescription = () => {
                 image: image.medium
               })
             })    
-            .catch(error => navigate('/prescription/prescription-not-found'));      
+            .catch(() => navigate('/prescription/prescription-not-found'));      
           })
-          .catch(error => navigate('/prescription/prescription-not-found'));
+          .catch(() => navigate('/prescription/prescription-not-found'));
         }
-  },[])
+  },[]);
 
   return (
     <section className='script-share-button-container'>
