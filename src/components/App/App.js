@@ -7,7 +7,6 @@ import Prescription from '../Prescription/Prescription';
 import Header from '../Header/Header';
 import ShowDetails from '../ShowDetails/ShowDetails';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
-import PrescriptionNotFound from '../PrescriptionNotFound/PrescriptionNotFound'
 import { formatShowSearch } from '../../utility-functions/utility-functions';
 import { getShow, postPrescription} from '../../api-calls/api-calls';
 import { Routes, Route, useNavigate } from 'react-router-dom';
@@ -73,7 +72,7 @@ function App() {
             </main>
           </>
         }/>
-        <Route exact path='/prescription/:id' element={
+        <Route path='/prescription/:id' element={
           <>
             <Header />
             <main className='prescription-container'>
@@ -86,10 +85,17 @@ function App() {
              <>
              <Header />
              <main className='not-found-container'>
-               <PrescriptionNotFound />
-               <button className='make-new-script' onClick={() => navigate('/')}>Write a new prescription</button>
+              <h1 className="message">Oops... the requested prescription is not on file. Check the URL or contact your taste physician.</h1>
+              <button className='make-new-script' onClick={() => navigate('/')}>Write a new prescription</button>
              </main>
            </>
+        }/>
+        <Route path='*' element={
+          <>
+            <Header />
+            <h1>404: Not found</h1>
+            <button className='make-new-script' onClick={ () => navigate('/') } >Back to TasteRX</button>
+          </>
         }/>
       </Routes>
     </div>
