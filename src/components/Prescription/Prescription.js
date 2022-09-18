@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import './Prescription.css';
 import rxLogo from '../../assets/RX-logo.svg';
 import ShareButton from '../ShareButton/ShareButton';
@@ -9,23 +9,29 @@ const Prescription = () => {
   const [show, setShow] = useState({});
   const [prescription, setPrescription] = useState('');
   const { id }  = useParams();
+  const navigate = useNavigate()
 
   useEffect(() => {
-    getPrescription(id)
-      .then(data => {
-        setPrescription(data.prescription);
-        getShowById(data.prescription.showID)
-          .then(data => {
-            const { name, officialSite, image } = data;
-            setShow({
-              name: name,
-              officialSite: officialSite,
-              image: image.medium
-            })
-          })    
-          .catch(error => console.log(error));      
-        })
-        .catch(error => console.log(error));
+    if(parseInt(id) === NaN) {
+      navigate('/prescription/prescription-not-found')
+      return 
+    } else {
+      getPrescription(id)
+        .then(data => {
+          setPrescription(data.prescription);
+          getShowById(data.prescription.showID)
+            .then(data => {
+              const { name, officialSite, image } = data;
+              setShow({
+                name: name,
+                officialSite: officialSite,
+                image: image.medium
+              })
+            })    
+            .catch(error => navigate('/prescription/prescription-not-found'));      
+          })
+          .catch(error => navigate('/prescription/prescription-not-found'));
+        }
   },[])
 
   return (
