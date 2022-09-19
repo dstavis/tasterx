@@ -36,7 +36,7 @@ This project utilized asynchronous workflow relying on code reviews within PR re
 
 ## Future Additions 
 * Search bar with predictive text
-* Ability to prescribe single episodes of a TV show 
+* Ability to prescribe single episode of a TV show 
 * Improving performance
 * Prescribe additional media - Music, Movies, Video Games, Books
 ## Members
