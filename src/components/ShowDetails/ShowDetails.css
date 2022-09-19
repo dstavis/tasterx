@@ -4,7 +4,6 @@
   align-content: center;
   width: 100%;
   height: 55%;
-  border-bottom: 2px solid black;
 }
 
 .prompt-show-name-container {
@@ -20,8 +19,12 @@
 .rx-logo {
   height: 30%;
   aspect-ratio: auto;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 2%;
+}
+
+.logo-img {
+  height: 100px;
 }
 
 .prompt-show-name-image-container {
@@ -33,7 +36,6 @@
 
 .show-name {
   font-size: 1.5em;
-
 }
 
 .show-poster {

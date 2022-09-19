@@ -11,9 +11,8 @@
   flex-direction: column;
   align-items: center;
   height: 60vh;
-  min-height: 400px;
-  max-height: 600px;
   width: 700px;
+  max-width: 800px;
   border: 3px solid black;
   border-radius: 10px;
   background-image: url('https://i.pinimg.com/originals/57/a3/51/57a3513e2ca93a9f71ff8d78b9f02e71.jpg');
@@ -25,19 +24,17 @@
   width: 100%;
   height: 65%;
   align-items: center;
-  /* border-bottom: 3px black solid; */
 }
 
 .script-rx-logo {
   align-self: flex-start;
-  /* height: 100px; */
   aspect-ratio: auto;
   margin-top: 2%;
   margin-left: 2%;
 }
 
 .rx-img {
-  height: 100px;
+  height: 120px;
 }
 
 .show-name-link-container {
@@ -60,6 +57,10 @@
   height: 80%;
   border-radius: 10px;
   margin-right: 40px;
+}
+
+.poster-img {
+  height: 100%;
 }
 
 .bottom-container {
@@ -97,73 +98,33 @@
     height: 100%;
   }
 
-  /* .script-top-container {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      height: 65%;
-      align-items: center;
-    } */
-
   .script-top-container {
     flex-wrap: wrap;
-    /* justify-content: flex-start; */
-    /* align-items: flex-start; */
   }
 
-  /* .script-rx-logo {
-      align-self: flex-start;
-      height: 100px;
-      aspect-ratio: auto;
-      margin: 2%;
-      display: block;
-    } */
 
   .script-rx-logo {
-    width: 100% !important;
-    /* margin-right: auto; */
+    width: 100%;
   }
 
-  /* .show-name-link-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-  /* } */
+  .rx-img {
+    max-height: 12vh;
+  }
+
   .show-name-link-container {
     width: 40%;
     margin-left: 10%;
   }
-  
-  /* .script-show-name {
-    font-size: 1.4em;
-    background-color: red;
-  } */
-
-  .script-show-name {
-
-  }
-  
-  /* .show-link {
-    text-decoration: none;
-    background-color: blue;
-  } */
-
-  .show-link {
-
-  }
 
   .script-show-poster {
-    margin: 0 5px 0 0;
-    height: 90%;
-    width: 45%;
+    margin: 0 20px 0 0;
+    width: 40%;
   }
+
 
   .poster-img {
     aspect-ratio: auto;
     position: relative;
-    top: -10vh;
-    /* left: -10%; */
     width: 100%;
     border-radius: 10px;
   }
@@ -172,4 +133,18 @@
     padding: 10px;
     height: 100%;
   }
+}
+
+@media (800px <= width <= 1200px) {
+
+  .poster-img{
+    height: 100%;
+    width: auto;
+  }
+
+  .script-container{
+    width: 700px;
+    min-height: 50vh;
+  }
+
 }
