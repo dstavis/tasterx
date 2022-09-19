@@ -41,4 +41,10 @@ describe('Error handling', () => {
         cy.get('.message')
             .contains('Oops... the requested prescription is not on file. Check the URL or contact your taste physician.')  
     });
+
+    it('Should have 404 page for "garbage" URL', () => {
+        cy.visit('http://localhost:3000/gramcracker')
+            .get('.not-found-message')
+            .contains('404: Not found');
+    });
 });
