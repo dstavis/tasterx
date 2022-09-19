@@ -15,6 +15,9 @@ This project utilized asynchronous workflow relying on code reviews within PR re
 
 ## Technologies Used
 - React/JSX
+- Postgres
+- Sequelize
+- Heroku
 - Javascript
 - HTML/CSS
 - Cypress
@@ -28,8 +31,8 @@ This project utilized asynchronous workflow relying on code reviews within PR re
 <img width="300" alt="TasteRX wireframe3" src="https://user-images.githubusercontent.com/100659793/191033824-4f2ba1fd-267d-4aad-a15b-cf54e9a9b7c4.png">
 <img width="300" alt="TasteRX wireframe4" src="https://user-images.githubusercontent.com/100659793/191033608-7eb3c94d-1482-444b-9476-8a953b8bd9e0.png">
 
-
 ## Guided Motion Feature
+
 
 ## Future Additions 
 * Search bar with predictive text
@@ -47,5 +50,5 @@ __________________________
 __________________________
 - [Project Spec](https://frontend.turing.edu/projects/module-3/stretch.html)
 - UI [GitHub](https://github.com/dstavis/tasterx)
-- API [GitHub] (https://github.com/dstavis/tasterx-api)
+- API [GitHub](https://github.com/dstavis/tasterx-api)
 - [Project Board](https://trello.com/b/X48waU4e/tasterx)
