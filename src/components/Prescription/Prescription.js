@@ -41,14 +41,19 @@ const Prescription = () => {
       <ShareButton />
       <div className='script-container'>
         <div className='script-top-container'>
-          <img className='script-rx-logo' src={rxLogo} alt='rx logo' />
+          <div className="script-rx-logo">
+            <img className='rx-img' src={rxLogo} alt='rx logo' />
+          </div>
+          
           <div className='show-name-link-container'>
-            <p className='to-be-prescribed'>Show to be prescribed:</p>
+            {/* <p className='to-be-prescribed'>Show to be prescribed:</p> */}
             <p className='script-show-name'>{show.name}</p>
             {show.officialSite && <a className='show-link' href={show.officialSite} target='_blank' rel='noreferrer'>Official TV show website</a>}
             {!show.officialSite && <a className='show-link' href={`https://www.google.com/search?q=${show.name}`} target='_blank' rel='noreferrer'>{`Search google for ${show.name}`}</a>}
           </div>
-          <img className='script-show-poster' src={show.image} alt='show poster'/>
+          <div className='script-show-poster'>
+            <img className='poster-img' src={show.image} alt='show poster'/>
+          </div>
         </div>
         <div className='bottom-container'>
           <p className='script-message'>{prescription.message}</p>
