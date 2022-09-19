@@ -3,7 +3,7 @@
 [Deployed Link](https://tasterx.herokuapp.com/)
 
 ## Abstract
-TasteRX is an engaging UX born from the idea of curing the world of bad taste.  Do you have good taste in TV shows?  Do you think the world would be a better place if more watched a particular show?  The TasteRX UI allows users to search for and then 'prescribe' a TV show with a custom message to a fellow human; the created prescription can then easily be shared via URL.   
+TasteRX is an engaging UX born from the idea of curing the world of bad taste.  Do you have good taste in TV shows?  Do you think the world would be a better place if more people watched a particular show?  The TasteRX UI allows users to search for and then 'prescribe' a TV show with a custom message to a fellow human; the created prescription can then easily be shared via URL.   
 
 This project utilized asynchronous workflow relying on code reviews within PR requests, daily stand-ups, project board tickets, and Slack among four remote contributors
 
