@@ -4,13 +4,13 @@
   align-content: center;
   width: 100%;
   height: 55%;
-  border-bottom: 2px solid black;
 }
 
 .prompt-show-name-container {
   margin-top: 10px;
-  white-space: nowrap;
+  white-space: wrap;
   text-align: left;
+  max-width: 50%;
 }
 
 .prompt {
@@ -20,8 +20,11 @@
 .rx-logo {
   height: 30%;
   aspect-ratio: auto;
-  border: 1px solid black;
   margin: 2%;
+}
+
+.logo-img {
+  height: 100px;
 }
 
 .prompt-show-name-image-container {
@@ -47,9 +50,7 @@
 /* Small devices */
 
 @media (max-width: 576px) {
-  .prompt-show-name-image-container {
-    flex-direction: column;
-  }
+
 
   .prompt-show-name-container {
     text-align: center;
@@ -60,7 +61,7 @@
   }
 
   .rx-logo {
-    height: 30%;
+    max-height: 20%;
   }
 
   .prompt {
@@ -71,6 +72,12 @@
   .show-poster {
     margin: 0 0 20px 0;
     align-self: center;
-    height: 60%;
+    width: 50%;
+    margin-right: 10px;
   }
+
+  .poster-img{
+    width: 100%;
+  }
+
 }

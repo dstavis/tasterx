@@ -11,6 +11,7 @@
   align-items: center;
   height: 70vh;
   width: 700px;
+  max-width: 1200px;
   margin-top: 20vh;
 }
 
@@ -66,29 +67,31 @@
   background-color: #ef23b5;
 }
 
+
 /* Small devices */
-@media (max-width: 576px) {
+@media (max-width: 1200px) {
   .home-page {
     flex-direction: column;
     margin: 0;
   }
-
+  
   .prescription-preview-container {
     margin: 0 0 20px 0;
     width: 90vw;
+    max-width: 800px;
     order: 2;
   }
-
+  
   .prescription-preview {
     width: 100%;
   }
-
+  
   .prescription-container {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
-
+  
   .prescription-page {
     display: flex;
     flex-direction: column;
@@ -96,9 +99,15 @@
     height: 82%;
     width: 45%;
   }
-
+  
   .make-new-script {
     height: 8%;
     width: 50%;
   }
+}
+
+/* Medium screen sizes */
+
+@media (800px <= width <= 1200px) {
+
 }

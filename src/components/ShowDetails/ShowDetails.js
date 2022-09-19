@@ -5,7 +5,9 @@ import rxLogo from '../../assets/RX-logo.svg';
 const ShowDetails = ({ name, image }) => {
   return (
     <div className='show-details'>
-        <img className='rx-logo' src={rxLogo} alt='rx logo' />
+        <div className='rx-logo'>
+          <img className='logo-img' src={rxLogo} alt='rx logo' />
+        </div>
         <div className='prompt-show-name-image-container'>
         <div className='prompt-show-name-container'>
           <p className='prompt'>Show to be prescribed:</p>
