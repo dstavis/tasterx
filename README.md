@@ -18,6 +18,7 @@ This project utilized asynchronous workflow relying on code reviews within PR re
 - Postgres
 - Sequelize
 - Heroku
+- Express.js
 - Javascript
 - HTML/CSS
 - Cypress
@@ -28,7 +29,6 @@ This project utilized asynchronous workflow relying on code reviews within PR re
 ## Illustrated Design Mock-up
 <img width="300" alt="TasteRX wireframe1" src="https://user-images.githubusercontent.com/100659793/191032835-4c35fdeb-31bb-43cf-9b94-f2b54643d0c6.png">
 <img width="300" alt="TasteRX wireframe2" src="https://user-images.githubusercontent.com/100659793/191033284-0459a8a5-6a0a-4cf0-8b75-8d1a251227c7.png">
-<img width="300" alt="TasteRX wireframe3" src="https://user-images.githubusercontent.com/100659793/191033824-4f2ba1fd-267d-4aad-a15b-cf54e9a9b7c4.png">
 <img width="300" alt="TasteRX wireframe4" src="https://user-images.githubusercontent.com/100659793/191033608-7eb3c94d-1482-444b-9476-8a953b8bd9e0.png">
 
 ## Guided Motion Feature
