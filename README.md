@@ -3,15 +3,17 @@
 [Deployed Link](https://tasterx.herokuapp.com/)
 
 ## Abstract
-TasteRX is an engaging UX born from the idea of curing the world of bad taste.  Do you have good taste in TV shows?  Do you think the world would be a better place if more people watched a particular show?  The TasteRX UI allows users to search for and then 'prescribe' a TV show with a custom message to a fellow human; the created prescription can then easily be shared via URL.   
+Do you have good taste in TV shows?  Do you think the world would be a better place if more people watched a particular show?  TasteRX allows users to search for and then 'prescribe' a TV show to another person. The created prescription can then easily be shared via URL.
 
-This project utilized asynchronous workflow relying on code reviews within PR requests, daily stand-ups, project board tickets, and Slack among four remote contributors
+The four members of this project collaborated remotely. We used daily stand-ups, screensharing over Zoom, GitHub Pull Requests, Code Reviews, Kanban-style project board tickets, and Slack to remain productive on a tight schedule. With just 11 part-time days to determine our concept, collect design inspiration, wireframe our proposed features, learn new technologies, and build an end-to-end tested frontend app with backend server and database, teamwork and collaboration was vital to achieve our goals.
 
 * Learning Goals:
-    * Explore backend web technologies to develop a functioning database that would allow our application to be accessed on any device with an internet connection.   
-    * Gain further familiarity with React, React Router, and E2E testing with Cypress
+    * Without instruction, learn how to attach a database to our backend in order to persist user-generated data
+    * Become proficient in React, React Router, and E2E testing with Cypress
     * App development using React hooks in place of class components
 
+## External Data APIs
+- Data was sourced from TVMaze's publicly available TV show API https://www.tvmaze.com/api
 
 ## Technologies Used
 - React/JSX
@@ -36,10 +38,14 @@ This project utilized asynchronous workflow relying on code reviews within PR re
 
 
 ## Future Additions 
-* Search bar with predictive text
-* Ability to prescribe single episode of a TV show 
-* Improving performance
-* Prescribe additional media - Music, Movies, Video Games, Books
+* Predictive text for search bar
+* Let users prescribe specific episodes of a chosen TV show 
+* Additional media types such as Music, Video Games, and Books
+* Let prescription recipients respond to inform their prescriber how it went
+* Integration with Social Media sharing platforms
+* Present the shareable prescription as a downloadable image
+
+
 ## Members
 __________________________
 - Anna Spitz [linkedin](https://www.linkedin.com/in/aspitz1/)
