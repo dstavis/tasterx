@@ -12,7 +12,7 @@ const Header = () => {
       </Link>
       <img className='logo' src={logo} alt='logo' />
     </header>
-  )
+  );
 }
 
 export default Header;

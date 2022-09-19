@@ -3,7 +3,7 @@ import './ShareButton.css';
 
 const ShareButton = () => {
 
-  const currentURL = window.location.href
+  const currentURL = window.location.href;
 
   return (
     <button className='share-button' onClick={ () => { 
@@ -17,7 +17,7 @@ const ShareButton = () => {
         <p className='button-label'>Copy Share Link <span className='link-icon'>🔗</span></p>
       </div>
     </button>
-  )
+  );
 }
 
 export default ShareButton;

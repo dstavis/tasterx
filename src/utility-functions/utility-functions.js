@@ -1,5 +1,5 @@
 const formatShowSearch = (string) => {
-    return string.toLowerCase().split(' ').join('+');
+  return string.toLowerCase().split(' ').join('+');
 }
 
-export { formatShowSearch } 
+export { formatShowSearch };

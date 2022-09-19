@@ -11,7 +11,7 @@ const Instructions = () => {
         <li>Click submit and you will see the prescription!</li>
       </ol>
     </article>
-  )
+  );
 }
 
 export default Instructions;
