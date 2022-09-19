@@ -44,6 +44,11 @@
   height: 100%;
 }
 
+.to-be-prescribed {
+  padding-bottom: 30px;
+  align-self: flex-start;
+}
+
 .script-show-name {
   font-size: 1.4em;
 }
@@ -53,7 +58,6 @@
 }
 
 .script-show-poster {
-  overflow: visible;
   height: 80%;
   border-radius: 10px;
   margin-right: 40px;
@@ -102,7 +106,6 @@
     flex-wrap: wrap;
   }
 
-
   .script-rx-logo {
     width: 100%;
   }
@@ -120,7 +123,6 @@
     margin: 0 20px 0 0;
     width: 40%;
   }
-
 
   .poster-img {
     aspect-ratio: auto;

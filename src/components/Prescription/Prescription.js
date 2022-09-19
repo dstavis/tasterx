@@ -27,8 +27,8 @@ const Prescription = () => {
                 name: name,
                 officialSite: officialSite,
                 image: image.medium
-              })
-            })    
+              });
+            })
             .catch(() => navigate('/prescription/prescription-not-found'));      
           })
           .catch(() => navigate('/prescription/prescription-not-found'));
