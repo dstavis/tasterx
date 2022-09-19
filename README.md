@@ -12,6 +12,11 @@ The four members of this project collaborated remotely. We used daily stand-ups,
     * Become proficient in React, React Router, and E2E testing with Cypress
     * App development using React hooks in place of class components
 
+## Local Set-Up Instructions
+* clone down the repo by running `git clone git@github.com:dstavis/tasterx.git` in the terminal
+* run `npm install` in the terminal
+* run `npm start` in the terminal
+
 ## External Data APIs
 - Data was sourced from TVMaze's publicly available TV show API https://www.tvmaze.com/api
 
