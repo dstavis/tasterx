@@ -1,11 +1,11 @@
 .error-message-container {
-    margin-bottom: 1%;
+  margin-bottom: 1%;
 }
 
 .error-message {
-    font-size: 1.2em;
-    padding: 0 7px;
-    margin-top: 3%;
-    background-color: #ff00008f;
-    border-radius: 4px;
+  font-size: 1.2em;
+  padding: 0 7px;
+  margin-top: 3%;
+  background-color: #ff00008f;
+  border-radius: 4px;
 }
