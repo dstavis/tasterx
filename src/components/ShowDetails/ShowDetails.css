@@ -19,7 +19,6 @@
 .rx-logo {
   height: 30%;
   aspect-ratio: auto;
-  /* border: 1px solid black; */
   margin: 2%;
 }
 
@@ -36,6 +35,7 @@
 
 .show-name {
   font-size: 1.5em;
+
 }
 
 .show-poster {
@@ -49,9 +49,7 @@
 /* Small devices */
 
 @media (max-width: 576px) {
-  .prompt-show-name-image-container {
-    flex-direction: column;
-  }
+
 
   .prompt-show-name-container {
     text-align: center;
@@ -62,7 +60,7 @@
   }
 
   .rx-logo {
-    height: 30%;
+    max-height: 20%;
   }
 
   .prompt {
@@ -74,5 +72,6 @@
     margin: 0 0 20px 0;
     align-self: center;
     height: 60%;
+    margin-right: 10px;
   }
 }
