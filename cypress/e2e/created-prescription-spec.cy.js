@@ -30,11 +30,10 @@ describe('Prescription component', () => {
   it('shows a created prescription', () => {
     cy.url().should('include', '/prescription/1');
     cy.get('.script-container').contains('Official TV show website');
-    cy.get('.script-container').contains('Show to be prescribed:');
     cy.get('[class*=script-show-name]').contains('Game of Thrones');
     cy.get('a').should('have.attr', 'href');
     cy.get('[class*=show-link]').should('have.attr', 'href', 'http://www.hbo.com/game-of-thrones');
-    cy.get('[class*=script-show-poster]').should('have.attr', 'src', 'https://static.tvmaze.com/uploads/images/medium_portrait/190/476117.jpg');
+    cy.get('[class*=poster-img]').should('have.attr', 'src', 'https://static.tvmaze.com/uploads/images/medium_portrait/190/476117.jpg');
     cy.get('[class*=bottom-container]').contains('message for patient');
   });
 
@@ -48,11 +47,10 @@ describe('Prescription component', () => {
     cy.wait(200);
     cy.url().should('include', '/prescription/1');
     cy.get('.script-container').contains('Official TV show website');
-    cy.get('.script-container').contains('Show to be prescribed:');
     cy.get('[class*=script-show-name]').contains('Game of Thrones');
     cy.get('a').should('have.attr', 'href');
     cy.get('[class*=show-link]').should('have.attr', 'href', 'http://www.hbo.com/game-of-thrones');
-    cy.get('[class*=script-show-poster]').should('have.attr', 'src', 'https://static.tvmaze.com/uploads/images/medium_portrait/190/476117.jpg');
+    cy.get('[class*=poster-img]').should('have.attr', 'src', 'https://static.tvmaze.com/uploads/images/medium_portrait/190/476117.jpg');
     cy.get('[class*=bottom-container]').contains('message for patient');
     cy.get('[class*=make-new-script]').click();
     cy.url().should('not.include', '/prescription/1');

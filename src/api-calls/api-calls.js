@@ -23,7 +23,7 @@ const getShowById = (endpoint) => {
 }
 
 const getPrescription = (endpoint) => {
-  return fetch(`${stagingHostname}/prescriptions/${endpoint}`).then(
+  return fetch(`${productionHostname}/prescriptions/${endpoint}`).then(
     (response) => {
       if (!response.ok) {
         throw new Error("Sorry, looks like we can't find this prescription.");
@@ -34,7 +34,7 @@ const getPrescription = (endpoint) => {
 };
 
 const postPrescription = (body) => {
-  return fetch(`${stagingHostname}/prescriptions/`, {
+  return fetch(`${productionHostname}/prescriptions/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
