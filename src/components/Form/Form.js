@@ -46,7 +46,7 @@ const Form = ({ setPersonalMessage, resetAppState, hasShow }) => {
 
       <button type='submit' className='submit-button' disabled={!message || !hasShow || !signature}>Submit</button>
     </form>
-  )
+  );
 }
 
 export default Form;

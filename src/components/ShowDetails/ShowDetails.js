@@ -14,7 +14,7 @@ const ShowDetails = ({ name, image }) => {
         {image && <img className='show-poster' src={image} alt='tv show poster'/>}
         </div>
     </div>
-  )
+  );
 }
 
 export default ShowDetails;
