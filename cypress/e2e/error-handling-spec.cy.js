@@ -39,13 +39,19 @@ describe('Error handling', () => {
       .visit('http://localhost:3000/prescription/1000');
         
     cy.get('.message')
-      .contains('Oops... the requested prescription is not on file. Check the URL or contact your taste physician.');
+      .contains('Oops... the requested prescription is not on file. Check the URL or contact your taste physician.')
+      .get('.make-new-script')
+      .click()
+      .location('pathname').should('eq', '/');
   });
 
   it('Should have 404 page for "garbage" URL', () => {
     cy.visit('http://localhost:3000/gramcracker')
       .get('.not-found-message')
-      .contains('404: Not found');
+      .contains('404: Not found')
+      .get('.make-new-script')
+      .click()
+      .location('pathname').should('eq', '/');
   });
   
 });
